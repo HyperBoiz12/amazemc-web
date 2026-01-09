@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AmazeMC | Staff</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0b0b0b;
+            color: white;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #000;
+        }
+
+        nav img {
+            height: 40px;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* HEADER */
+        .page-header {
+            text-align: center;
+            padding: 110px 20px 70px;
+            background: radial-gradient(circle at top, #111, #000);
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: #aaa;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: auto;
+        }
+
+        /* STAFF SECTION */
+        .staff-container {
+            max-width: 1100px;
+            margin: 70px auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 35px;
+        }
+
+        .staff-card {
+            background: #111;
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+
+        .staff-avatar {
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+            border: 3px solid #ff3a3a;
+        }
+
+        .staff-name {
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+
+        .staff-rank {
+            font-size: 12px;
+            letter-spacing: 1px;
+            color: #3aa0ff;
+            margin-bottom: 15px;
+        }
+
+        .staff-desc {
+            font-size: 14px;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        /* FOOTER */
+        .main-footer {
+            background: #000;
+            padding: 60px 40px 20px;
+            color: #aaa;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .footer-name {
+            font-size: 26px;
+            color: white;
+        }
+
+        .footer-role {
+            color: #ff2a2a;
+            font-size: 12px;
+        }
+
+        .footer-line {
+            width: 40px;
+            height: 3px;
+            background: #ff2a2a;
+            margin: 12px 0;
+        }
+
+        .footer-text {
+            max-width: 350px;
+            line-height: 1.6;
+            color: #888;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-contact {
+            margin-bottom: 12px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #111;
+            margin-top: 60px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .footer-bottom span {
+            color: #3aa0ff;
+        }
+
+        @media (max-width: 900px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <img src="assets/images/logo.png" alt="AmazeMC">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="discord.html">Discord</a>
+            <a href="rules.html">Rules</a>
+            <a href="vote.html">Vote</a>
+            <a href="staff.html">Staff</a>
+        </div>
+    </nav>
+
+    <!-- HEADER -->
+    <section class="page-header">
+        <h1>Our Staff Team</h1>
+        <p>The people who keep AmazeMC safe, fun, and running smoothly.</p>
+    </section>
+
+    <!-- STAFF -->
+    <section class="staff-container">
+
+        <div class="staff-card">
+            <img src="assets/images/staff/raj_plays.png" class="staff-avatar">
+            <div class="staff-name">raj_plays</div>
+            <div class="staff-rank">FOUNDER & OWNER</div>
+            <p class="staff-desc">
+                Oversees the server and ensures the best experience for everyone.
+            </p>
+        </div>
+
+        <div class="staff-card">
+            <img src="assets/images/staff/nothyperboiz.png" class="staff-avatar">
+            <div class="staff-name">NotHyperBoiz</div>
+            <div class="staff-rank">ADMIN</div>
+            <p class="staff-desc">
+                Manages staff team and helps maintain server stability.
+            </p>
+        </div>
+
+        <div class="staff-card">
+            <img src="assets/images/staff/mod2.png" class="staff-avatar">
+            <div class="staff-name">DEVILWATER</div>
+            <div class="staff-rank">MODERATOR</div>
+            <p class="staff-desc">
+                Helps players, moderates chat, and keeps the community friendly.
+            </p>
+        </div>
+
+        <div class="staff-card">
+            <img src="assets/images/staff/helper.png" class="staff-avatar">
+            <div class="staff-name">Jeet</div>
+            <div class="staff-rank">Staff</div>
+            <p class="staff-desc">
+                Designs builds, spawns, and event areas on the server.
+            </p>
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <div>
+                <p class="footer-title">OUR SERVER TEAM</p>
+                <h3 class="footer-name">Admin One</h3>
+                <p class="footer-role">FOUNDER & OWNER</p>
+                <div class="footer-line"></div>
+                <p class="footer-text">Building a friendly and fun Minecraft experience.</p>
+            </div>
+
+            <div>
+                <p class="footer-title">QUICK LINKS</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">› Home</a></li>
+                    <li><a href="gallery.html">› Gallery</a></li>
+                    <li><a href="discord.html">› Discord</a></li>
+                    <li><a href="rules.html">› Rules</a></li>
+                    <li><a href="vote.html">› Vote</a></li>
+                    <li><a href="staff.html">› Staff</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="footer-title">CONTACT INFO</p>
+                <p class="footer-contact">🌐 amazemc.zoho.to:8107</p>
+                <p class="footer-contact">🎮 Java Edition</p>
+                <p class="footer-contact">📍 India</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AmazeMC. All rights reserved.</p>
+            <p>CREATED & DESIGNED BY <span>You</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AmazeMC | Minecraft Server</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #04079d;
+            color: white;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #000;
+        }
+
+        nav img {
+            height: 40px;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 120px 20px 60px;
+            background: radial-gradient(circle at top, #111, #000);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
+            color: #aaa;
+            max-width: 600px;
+            margin: auto;
+            font-size: 1.1rem;
+        }
+
+        /* JOIN BUTTON */
+        .join-btn-wrapper {
+            text-align: center;
+            margin: 40px 0 10px;
+        }
+
+        .join-btn {
+            background: linear-gradient(135deg, #3aa0ff, #0066ff);
+            color: white;
+            border: none;
+            padding: 16px 42px;
+            font-size: 1.2rem;
+            border-radius: 40px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transition: all 0.25s ease;
+        }
+
+        .join-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+        }
+
+        /* SERVER STATUS */
+        .server-status {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            margin-bottom: 40px;
+            color: #ccc;
+        }
+
+        #status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: gray;
+        }
+
+        .online {
+            background: #00ff7f;
+            box-shadow: 0 0 10px #0dff00;
+        }
+
+        .offline {
+            background: red;
+            box-shadow: 0 0 10px red;
+        }
+
+        /* FEATURES */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 80px auto;
+            padding: 0 20px;
+        }
+
+        .feature {
+            background: #111;
+            padding: 30px;
+            border-radius: 14px;
+            text-align: center;
+        }
+
+        .feature p {
+            color: #888;
+            font-size: 14px;
+        }
+
+        /* FOOTER */
+        .main-footer {
+            background: #000;
+            padding: 60px 40px 20px;
+            color: #aaa;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .footer-name {
+            font-size: 26px;
+            color: white;
+        }
+
+        .footer-role {
+            color: #ff2a2a;
+            font-size: 12px;
+        }
+
+        .footer-line {
+            width: 120px;
+            height: 3px;
+            background: #ff2a2a;
+            margin: 12px 0;
+        }
+
+        .footer-text {
+            max-width: 350px;
+            line-height: 1.6;
+            color: #ffffff;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #0005ff;
+            margin-top: 60px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .footer-bottom span {
+            color: #3aa0ff;
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <img src="assets/images/logo.png" alt="AmazeMC Logo">
+    <div>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="rules.html">Rules</a>
+        <a href="discord.html">Discord</a>
+        <a href="vote.html">Vote</a>
+    </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Welcome To AmazeMc</h1>
+    <p>A cracked Minecraft survival server with events, economy, and an active community.</p>
+</section>
+
+<!-- JOIN BUTTON -->
+<div class="join-btn-wrapper">
+    <button class="join-btn" onclick="copyIP()">🎮 Join Server</button>
+</div>
+
+<!-- LIVE SERVER STATUS -->
+<div class="server-status">
+    <span id="status-dot"></span>
+    <span id="status-text">Checking server status...</span>
+</div>
+
+<!-- FEATURES -->
+<section class="features">
+    <div class="feature">
+        <h3>⚔️ Survival</h3>
+        <p>Balanced survival gameplay with no lag.</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+    <div class="footer-container">
+
+        <div>
+            <p class="footer-title">OUR SERVER TEAM</p>
+            <h3 class="footer-name">raj_plays</h3>
+            <p class="footer-role">FOUNDER & OWNER</p>
+            <div class="footer-line"></div>
+            <p class="footer-text">Building a friendly and fun Minecraft experience.</p>
+        </div>
+
+        <div>
+            <p class="footer-title">QUICK LINKS</p>
+            <ul class="footer-links">
+                <li><a href="index.html">› Home</a></li>
+                <li><a href="gallery.html">› Gallery</a></li>
+                <li><a href="rules.html">› Rules</a></li>
+                <li><a href="discord.html">› Discord</a></li>
+                <li><a href="vote.html">› Vote</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <p class="footer-title">CONTACT INFO</p>
+            <p>🌐 amazemc.zoho.to:8107</p>
+            <p>🎮 Java Edition</p>
+            <p>📍 India</p>
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 AmazeMC. All rights reserved.</p>
+        <p>CREATED & DESIGNED BY <span>raj_plays</span></p>
+    </div>
+</footer>
+
+<script>
+function copyIP() {
+    navigator.clipboard.writeText("amazemc.zoho.to:8107");
+    alert("Server IP copied: amazemc.zoho.to:8107");
+}
+
+fetch("https://api.mcstatus.io/v2/status/java/amazemc.zoho.to:8107")
+    .then(res => res.json())
+    .then(data => {
+        const dot = document.getElementById("status-dot");
+        const text = document.getElementById("status-text");
+
+        if (data.online) {
+            dot.classList.add("online");
+            text.innerHTML = `Online • ${data.players.online}/${data.players.max} players`;
+        } else {
+            dot.classList.add("offline");
+            text.innerHTML = "Offline";
+        }
+    })
+    .catch(() => {
+        document.getElementById("status-text").innerHTML = "Status unavailable";
+    });
+</script>
+
+</body>
+</html>

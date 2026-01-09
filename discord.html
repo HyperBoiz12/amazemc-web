@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AmazeMC | Discord</title>
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #04079d;
+            color: white;
+        }
+
+        /* NAVBAR */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: #000;
+        }
+
+        nav img {
+            height: 40px;
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+        }
+
+        nav a:hover {
+            color: white;
+        }
+
+        /* HEADER */
+        .page-header {
+            text-align: center;
+            padding: 110px 20px 70px;
+            background: radial-gradient(circle at top, #111, #000);
+        }
+
+        .page-header h1 {
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+        }
+
+        .page-header p {
+            color: #aaa;
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: auto;
+        }
+
+        /* DISCORD SECTION */
+        .discord-section {
+            max-width: 900px;
+            margin: 70px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .discord-box {
+            background: #111;
+            border-radius: 16px;
+            padding: 50px 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+
+        .discord-box img {
+            width: 90px;
+            margin-bottom: 20px;
+        }
+
+        .discord-box h2 {
+            font-size: 2rem;
+            margin-bottom: 10px;
+        }
+
+        .discord-box p {
+            color: #aaa;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .discord-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #5865F2, #404EED);
+            color: white;
+            padding: 16px 45px;
+            border-radius: 40px;
+            text-decoration: none;
+            font-size: 1.1rem;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+            transition: all 0.25s ease;
+        }
+
+        .discord-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+        }
+
+        /* EMBED */
+        .discord-embed {
+            margin-top: 60px;
+            display: flex;
+            justify-content: center;
+        }
+
+        iframe {
+            border-radius: 12px;
+            border: none;
+        }
+
+        /* FOOTER */
+        .main-footer {
+            background: #000;
+            padding: 60px 40px 20px;
+            color: #aaa;
+        }
+
+        .footer-container {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 12px;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .footer-name {
+            font-size: 26px;
+            color: white;
+        }
+
+        .footer-role {
+            color: #ff2a2a;
+            font-size: 12px;
+        }
+
+        .footer-line {
+            width: 120px;
+            height: 3px;
+            background: #ff2a2a;
+            margin: 12px 0;
+        }
+
+        .footer-text {
+            max-width: 350px;
+            line-height: 1.6;
+            color: #888;
+        }
+
+        .footer-links {
+            list-style: none;
+            padding: 0;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: #888;
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .footer-contact {
+            margin-bottom: 12px;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #0005ff;
+            margin-top: 60px;
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            font-size: 12px;
+            color: #555;
+        }
+
+        .footer-bottom span {
+            color: #3aa0ff;
+        }
+
+        @media (max-width: 900px) {
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            iframe {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+    <img src="assets/images/logo.png" alt="AmazeMC Logo">
+    <div>
+        <a href="index.html">Home</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="rules.html">Rules</a>
+        <a href="discord.html">Discord</a>
+        <a href="vote.html">Vote</a>
+    </div>
+</nav>
+
+    <!-- HEADER -->
+    <section class="page-header">
+        <h1>Join Our Discord</h1>
+        <p>Chat with players, get updates, report issues, and stay connected with the AmazeMC community.</p>
+    </section>
+
+    <!-- DISCORD CONTENT -->
+    <section class="discord-section">
+        <div class="discord-box">
+            <img src="https://cdn-icons-png.flaticon.com/512/2111/2111370.png" alt="Discord">
+            <h2>AmazeMC Community</h2>
+            <p>Join our official Discord server to get announcements, participate in events, and talk with staff.</p>
+
+            <!-- 🔗 CHANGE THIS LINK -->
+            <a class="discord-btn" href="https://discord.gg/nJKnwsMQqZ" target="_blank">
+                💬 Join Discord
+            </a>
+        </div>
+
+        <!-- OPTIONAL DISCORD EMBED -->
+        <div class="discord-embed">
+            <!-- Replace SERVER_ID -->
+            <iframe 
+                src="https://discord.com/widget?id=1021795684820734032&theme=dark" 
+                width="350" 
+                height="500" 
+                allowtransparency="true" 
+                sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+            </iframe>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <div class="footer-container">
+
+            <div>
+                <p class="footer-title">OUR SERVER TEAM</p>
+                <h3 class="footer-name">raj_plays</h3>
+                <p class="footer-role">FOUNDER & OWNER</p>
+                <div class="footer-line"></div>
+                <p class="footer-text">Building a friendly and fun Minecraft experience.</p>
+            </div>
+
+            <div>
+                <p class="footer-title">QUICK LINKS</p>
+                <ul class="footer-links">
+                    <li><a href="index.html">› Home</a></li>
+                    <li><a href="gallery.html">› Gallery</a></li>
+                    <li><a href="rules.html">› Rules</a></li>
+                    <li><a href="discord.html">› Discord</a></li>
+                    <li><a href="vote.html">› Vote</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <p class="footer-title">CONTACT INFO</p>
+                <p class="footer-contact">🌐 amazemc.zoho.to:8107</p>
+                <p class="footer-contact">🎮 Java Edition</p>
+                <p class="footer-contact">📍 India</p>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 AmazeMC. All rights reserved.</p>
+            <p>CREATED & DESIGNED BY <span>raj_plays</span></p>
+        </div>
+    </footer>
+
+</body>
+</html>
